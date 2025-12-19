@@ -1,22 +1,18 @@
-# Process Documentation Management API
+# Process Documentation Management
 
-🚧 In Development
+A backend platform for managing process documentation in a structured,
+secure, and scalable manner.
 
-## Overview
-This project is a backend API designed for managing industrial process documentation such as SOPs, PFDs, and P&IDs.
-It supports version control, role-based access, and audit trails for engineering teams.
+## Project Structure
 
-## Target Users
-- Process Engineers
-- EPC Companies
-- Industrial Plants
-- Engineering Consultants
+### Phase 1: Authentication & Access Control ✅
+Implementation of secure user authentication and authorization mechanisms
+to control access to process-related knowledge and system resources.
 
-## Tech Stack
-- Python (FastAPI)
-- PostgreSQL
-- SQLAlchemy
-- JWT Authentication
+### Phase 2: Document Management System 🚧
+Design and implementation of a centralized document management system,
+including document structure, metadata handling, and versioning support.
 
-## Status
-MVP in progress
+## Future Projects
+- Project 2: Process Engineering Computation Engine
+- Project 3: Intelligent Process Optimization with ML
