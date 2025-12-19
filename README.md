@@ -1,7 +1,11 @@
-# Process Documentation Management
+# Process Documentation Management System (Backend)
 
 A backend platform for managing process documentation in a structured,
 secure, and scalable manner.
+
+## Project Scope
+This project focuses exclusively on backend development and provides
+an API-first system for authentication and process documentation management.
 
 ## Project Structure
 
@@ -13,6 +17,7 @@ to control access to process-related knowledge and system resources.
 Design and implementation of a centralized document management system,
 including document structure, metadata handling, and versioning support.
 
-## Future Projects
-- Project 2: Process Engineering Computation Engine
-- Project 3: Intelligent Process Optimization with ML
+## Related Projects
+- Process Documentation Management Web Client
+- Process Engineering Computation Engine
+- Intelligent Process Optimization with Machine Learning
