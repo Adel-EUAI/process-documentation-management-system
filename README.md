@@ -1,23 +1,34 @@
-# Process Documentation Management System (Backend)
+# Process Documentation Management System
 
-A backend platform for managing process documentation in a structured,
-secure, and scalable manner.
+A backend system for managing process documentation in a structured,
+secure, and API-driven way.
+
+This project provides the open-source core of a larger system designed
+to support process documentation, access control, and future extensions.
+
+---
+
+## Features
+- User authentication and access control
+- RESTful API architecture
+- Database-driven backend design
+- Clean, modular, and scalable project structure
+
+---
 
 ## Project Scope
-This project focuses exclusively on backend development and provides
-an API-first system for authentication and process documentation management.
+This repository contains the **open-source core backend** of the system.
 
-## Project Structure
+Advanced features such as extended workflows, analytics, optimization,
+and intelligent processing are intentionally kept outside this
+repository and planned as separate extensions.
 
-### Phase 1: Authentication & Access Control ✅
-Implementation of secure user authentication and authorization mechanisms
-to control access to process-related knowledge and system resources.
+---
 
-### Phase 2: Document Management System 🚧
-Design and implementation of a centralized document management system,
-including document structure, metadata handling, and versioning support.
+## Tech Stack
+- Python
+- FastAPI
+- SQLAlchemy
+- SQLite (development) / PostgreSQL (production-ready)
 
-## Related Projects
-- Process Documentation Management Web Client
-- Process Engineering Computation Engine
-- Intelligent Process Optimization with Machine Learning 
+
