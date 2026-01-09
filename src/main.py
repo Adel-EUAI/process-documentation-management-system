@@ -1,18 +1,19 @@
 from fastapi import FastAPI
-from app.db.database import engine
-from app.models import user
-from app.routers import auth
+from src.db.database import engine
+from src.models import user
+from src.routers import auth, documents
 
 app = FastAPI(title="Process Documentation Management API")
 
-user.Base.metadata.create_all(bind=engine)
+app.include_router(auth.router)
+app.include_router(documents.router)
 
-app.include_router(
-    auth.router,
-    prefix="/auth",
-    tags=["auth"]
-)
+user.Base.metadata.create_all(bind=engine)
 
 @app.get("/")
 def root():
     return {"status": "API is running"}
+
+
+
+

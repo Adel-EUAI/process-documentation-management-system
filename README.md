@@ -1,19 +1,36 @@
-# Authentication Service
+# Process Documentation Management System
 
-A minimal backend project demonstrating basic user authentication concepts,
-including email-based registration and password hashing.
+A backend service for managing process documentation with authentication,
+authorization, and document ownership.
 
 ## What this project shows
-- User registration with email and password
-- Password hashing and verification
-- Separation of authentication logic
+
+- OAuth2 Password Flow authentication
+- JWT-based authorization
+- User registration and login
+- Secure password hashing (Argon2)
+- Document CRUD operations
+- Document ownership enforcement
+- Clean separation of routers, services, models, and schemas
 
 ## What this project intentionally does NOT include
-- Database persistence
-- Token-based authentication (JWT)
-- Authorization / roles
+
+- File uploads
+- Document versioning
+- Search or indexing
+- Tagging or categorization
+- Analytics or reporting
+- Machine learning features
 - Frontend or UI
 
 ## How to run
+
+### Requirements
+- Python 3.10+
+
+### Setup
+
 ```bash
-python src/api/interface.py
+git clone <repository-url>
+cd process-documentation-management-system
+python -m venv venv

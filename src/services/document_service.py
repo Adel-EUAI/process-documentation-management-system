@@ -11,19 +11,27 @@ def create_document(
     user: User,
     data: DocumentCreate
 ) -> Document:
-    doc = Document(
+    document = Document(
         title=data.title,
         description=data.description,
         owner_id=user.id
     )
-    db.add(doc)
+    db.add(document)
     db.commit()
-    db.refresh(doc)
-    return doc
+    db.refresh(document)
+    return document
 
 
-def get_documents_for_user(db: Session, *, user: User):
-    return db.query(Document).filter(Document.owner_id == user.id).all()
+def get_documents_for_user(
+    db: Session,
+    *,
+    user: User
+) -> list[Document]:
+    return (
+        db.query(Document)
+        .filter(Document.owner_id == user.id)
+        .all()
+    )
 
 
 def get_document_by_id(
@@ -34,7 +42,10 @@ def get_document_by_id(
 ) -> Document | None:
     return (
         db.query(Document)
-        .filter(Document.id == document_id, Document.owner_id == user.id)
+        .filter(
+            Document.id == document_id,
+            Document.owner_id == user.id
+        )
         .first()
     )
 
@@ -42,7 +53,6 @@ def get_document_by_id(
 def update_document(
     db: Session,
     *,
-    user: User,
     document: Document,
     data: DocumentUpdate
 ) -> Document:
@@ -56,6 +66,10 @@ def update_document(
     return document
 
 
-def delete_document(db: Session, *, document: Document) -> None:
+def delete_document(
+    db: Session,
+    *,
+    document: Document
+) -> None:
     db.delete(document)
     db.commit()
